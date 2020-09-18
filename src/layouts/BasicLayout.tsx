@@ -26,7 +26,7 @@ const noMatch = (
     subTitle="Sorry, you are not authorized to access this page."
     extra={
       <Button type="primary">
-        <Link to="/user/login">Go Login</Link>
+        <Link to="/login">去登录</Link>
       </Button>
     }
   />
@@ -61,7 +61,7 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
 
 const defaultFooterDom = (
   <DefaultFooter
-    copyright={`${new Date().getFullYear()} 蚂蚁集团体验技术部出品`}
+    copyright={`${new Date().getFullYear()} 个人作品（baldwin）`}
     links={[
       {
         key: 'Ant Design Pro',
@@ -129,7 +129,9 @@ const BasicLayout: React.FC<BasicLayoutProps> = (props) => {
 
   return (
     <ProLayout
-      logo={logo}
+      disableMobile
+      // title="Remax"
+      logo="https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*1NHAQYduQiQAAAAAAAAAAABkARQnAQ"
       formatMessage={formatMessage}
       onCollapse={handleMenuCollapse}
       onMenuHeaderClick={() => history.push('/')}
@@ -146,6 +148,17 @@ const BasicLayout: React.FC<BasicLayoutProps> = (props) => {
         },
         ...routers,
       ]}
+      // menuHeaderRender={(logo, title='test') => (
+      //   <div
+      //     id="customize_menu_header"
+      //     onClick={() => {
+      //       window.open('https://remaxjs.org/');
+      //     }}
+      //   >
+      //     {logo}
+      //     {title}
+      //   </div>
+      // )}
       itemRender={(route, params, routes, paths) => {
         const first = routes.indexOf(route) === 0;
         return first ? (
