@@ -125,7 +125,7 @@ const LoginItem: React.FC<LoginItemProps> = (props) => {
               <Button
                 disabled={timing}
                 className={styles.getCaptcha}
-                size="large"
+                size='large'
                 onClick={() => {
                   const value = getFieldValue('mobile');
                   onGetCaptcha(value);

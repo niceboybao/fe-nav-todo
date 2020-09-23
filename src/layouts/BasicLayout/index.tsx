@@ -17,16 +17,16 @@ import Authorized from '@/utils/Authorized';
 import RightContent from '@/components/GlobalHeader/RightContent';
 import { ConnectState } from '@/models/connect';
 import { getMatchMenu } from '@umijs/route-utils';
-import logo from '../assets/logo.svg';
+// import logo from '../assets/logo.svg';
 
 const noMatch = (
   <Result
     status={403}
-    title="403"
-    subTitle="Sorry, you are not authorized to access this page."
+    title='403'
+    subTitle='Sorry, you are not authorized to access this page.'
     extra={
-      <Button type="primary">
-        <Link to="/login">去登录</Link>
+      <Button type='primary'>
+        <Link to='/login'>去登录</Link>
       </Button>
     }
   />
@@ -61,7 +61,7 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
 
 const defaultFooterDom = (
   <DefaultFooter
-    copyright={`${new Date().getFullYear()} 个人作品（baldwin）`}
+    copyright={`${new Date().getFullYear()} 个人作品@前端个性导航栏`}
     links={[
       {
         key: 'Ant Design Pro',
@@ -131,7 +131,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = (props) => {
     <ProLayout
       disableMobile
       // title="Remax"
-      logo="https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*1NHAQYduQiQAAAAAAAAAAABkARQnAQ"
+      logo='https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*1NHAQYduQiQAAAAAAAAAAABkARQnAQ'
       formatMessage={formatMessage}
       onCollapse={handleMenuCollapse}
       onMenuHeaderClick={() => history.push('/')}

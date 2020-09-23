@@ -130,7 +130,7 @@ const TableList: React.FC<{}> = () => {
           return false;
         }
         if (`${status}` === '3') {
-          return <Input {...rest} placeholder="请输入异常原因！" />;
+          return <Input {...rest} placeholder='请输入异常原因！' />;
         }
         return defaultRender(item);
       },
@@ -149,8 +149,8 @@ const TableList: React.FC<{}> = () => {
           >
             配置
           </a>
-          <Divider type="vertical" />
-          <a href="">订阅警报</a>
+          <Divider type='vertical' />
+          <a href=''>订阅警报</a>
         </>
       ),
     },
@@ -159,14 +159,14 @@ const TableList: React.FC<{}> = () => {
   return (
     <PageContainer>
       <ProTable<TableListItem>
-        headerTitle="查询表格"
+        headerTitle='查询表格'
         actionRef={actionRef}
-        rowKey="key"
+        rowKey='key'
         search={{
           labelWidth: 120,
         }}
         toolBarRender={() => [
-          <Button type="primary" onClick={() => handleModalVisible(true)}>
+          <Button type='primary' onClick={() => handleModalVisible(true)}>
             <PlusOutlined /> 新建
           </Button>,
         ]}
@@ -196,7 +196,7 @@ const TableList: React.FC<{}> = () => {
           >
             批量删除
           </Button>
-          <Button type="primary">批量审批</Button>
+          <Button type='primary'>批量审批</Button>
         </FooterToolbar>
       )}
       <CreateForm onCancel={() => handleModalVisible(false)} modalVisible={createModalVisible}>
@@ -210,8 +210,8 @@ const TableList: React.FC<{}> = () => {
               }
             }
           }}
-          rowKey="key"
-          type="form"
+          rowKey='key'
+          type='form'
           columns={columns}
         />
       </CreateForm>

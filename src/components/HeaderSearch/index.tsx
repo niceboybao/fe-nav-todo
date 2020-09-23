@@ -65,13 +65,13 @@ const HeaderSearch: React.FC<HeaderSearchProps> = (props) => {
       }}
     >
       <SearchOutlined
-        key="Icon"
+        key='Icon'
         style={{
           cursor: 'pointer',
         }}
       />
       <AutoComplete
-        key="AutoComplete"
+        key='AutoComplete'
         className={inputClass}
         value={value}
         style={{

@@ -28,7 +28,7 @@ export default defineConfig({
   routes: [
     {
       path: '/user',
-      component: '../layouts/UserLayout',
+      component: '@/layouts/UserLayout/index',
       routes: [
         {
           name: 'login',
@@ -39,11 +39,11 @@ export default defineConfig({
     },
     {
       path: '/',
-      component: '../layouts/SecurityLayout',
+      component: '@/layouts/SecurityLayout/index',
       routes: [
         {
           path: '/',
-          component: '../layouts/BasicLayout',
+          component: '@/layouts/BasicLayout/index',
           authority: ['admin', 'user'],
           routes: [
             {
@@ -82,9 +82,6 @@ export default defineConfig({
               component: './404',
             },
           ],
-        },
-        {
-          component: './404',
         },
       ],
     },

@@ -76,22 +76,22 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
     if (currentStep === 1) {
       return (
         <>
-          <FormItem name="target" label="监控对象">
+          <FormItem name='target' label='监控对象'>
             <Select style={{ width: '100%' }}>
-              <Option value="0">表一</Option>
-              <Option value="1">表二</Option>
+              <Option value='0'>表一</Option>
+              <Option value='1'>表二</Option>
             </Select>
           </FormItem>
-          <FormItem name="template" label="规则模板">
+          <FormItem name='template' label='规则模板'>
             <Select style={{ width: '100%' }}>
-              <Option value="0">规则模板一</Option>
-              <Option value="1">规则模板二</Option>
+              <Option value='0'>规则模板一</Option>
+              <Option value='1'>规则模板二</Option>
             </Select>
           </FormItem>
-          <FormItem name="type" label="规则类型">
+          <FormItem name='type' label='规则类型'>
             <RadioGroup>
-              <Radio value="0">强</Radio>
-              <Radio value="1">弱</Radio>
+              <Radio value='0'>强</Radio>
+              <Radio value='1'>弱</Radio>
             </RadioGroup>
           </FormItem>
         </>
@@ -101,21 +101,21 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
       return (
         <>
           <FormItem
-            name="time"
-            label="开始时间"
+            name='time'
+            label='开始时间'
             rules={[{ required: true, message: '请选择开始时间！' }]}
           >
             <DatePicker
               style={{ width: '100%' }}
               showTime
-              format="YYYY-MM-DD HH:mm:ss"
-              placeholder="选择开始时间"
+              format='YYYY-MM-DD HH:mm:ss'
+              placeholder='选择开始时间'
             />
           </FormItem>
-          <FormItem name="frequency" label="调度周期">
+          <FormItem name='frequency' label='调度周期'>
             <Select style={{ width: '100%' }}>
-              <Option value="month">月</Option>
-              <Option value="week">周</Option>
+              <Option value='month'>月</Option>
+              <Option value='week'>周</Option>
             </Select>
           </FormItem>
         </>
@@ -124,18 +124,18 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
     return (
       <>
         <FormItem
-          name="name"
-          label="规则名称"
+          name='name'
+          label='规则名称'
           rules={[{ required: true, message: '请输入规则名称！' }]}
         >
-          <Input placeholder="请输入" />
+          <Input placeholder='请输入' />
         </FormItem>
         <FormItem
-          name="desc"
-          label="规则描述"
+          name='desc'
+          label='规则描述'
           rules={[{ required: true, message: '请输入至少五个字符的规则描述！', min: 5 }]}
         >
-          <TextArea rows={4} placeholder="请输入至少五个字符" />
+          <TextArea rows={4} placeholder='请输入至少五个字符' />
         </FormItem>
       </>
     );
@@ -149,7 +149,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
             上一步
           </Button>
           <Button onClick={() => handleUpdateModalVisible(false, values)}>取消</Button>
-          <Button type="primary" onClick={() => handleNext()}>
+          <Button type='primary' onClick={() => handleNext()}>
             下一步
           </Button>
         </>
@@ -162,7 +162,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
             上一步
           </Button>
           <Button onClick={() => handleUpdateModalVisible(false, values)}>取消</Button>
-          <Button type="primary" onClick={() => handleNext()}>
+          <Button type='primary' onClick={() => handleNext()}>
             完成
           </Button>
         </>
@@ -171,7 +171,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
     return (
       <>
         <Button onClick={() => handleUpdateModalVisible(false, values)}>取消</Button>
-        <Button type="primary" onClick={() => handleNext()}>
+        <Button type='primary' onClick={() => handleNext()}>
           下一步
         </Button>
       </>
@@ -183,15 +183,15 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
       width={640}
       bodyStyle={{ padding: '32px 40px 48px' }}
       destroyOnClose
-      title="规则配置"
+      title='规则配置'
       visible={updateModalVisible}
       footer={renderFooter()}
       onCancel={() => handleUpdateModalVisible()}
     >
-      <Steps style={{ marginBottom: 28 }} size="small" current={currentStep}>
-        <Step title="基本信息" />
-        <Step title="配置规则属性" />
-        <Step title="设定调度周期" />
+      <Steps style={{ marginBottom: 28 }} size='small' current={currentStep}>
+        <Step title='基本信息' />
+        <Step title='配置规则属性' />
+        <Step title='设定调度周期' />
       </Steps>
       <Form
         {...formLayout}

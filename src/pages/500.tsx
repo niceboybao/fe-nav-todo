@@ -4,9 +4,9 @@ import { history } from 'umi';
 
 const NoFoundPage: React.FC<{}> = () => (
   <Result
-    status='404'
-    title='404'
-    subTitle='对不起，您访问的页面不存在。'
+    status='500'
+    title='500'
+    subTitle='服务器遇到错误，请稍后重试'
     extra={
       <Button type='primary' onClick={() => history.push('/')}>
         返回首页
