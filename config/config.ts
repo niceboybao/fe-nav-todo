@@ -28,6 +28,7 @@ export default defineConfig({
   routes: [
     {
       path: '/user',
+      // 登录流程
       component: '@/layouts/UserLayout/index',
       routes: [
         {
@@ -44,6 +45,7 @@ export default defineConfig({
         {
           path: '/',
           component: '@/layouts/BasicLayout/index',
+          //  用来配置这个路由的权限，如果配置了将会验证当前用户的权限，并决定是否展示
           authority: ['admin', 'user'],
           routes: [
             {
@@ -55,6 +57,13 @@ export default defineConfig({
               name: 'welcome',
               icon: 'smile',
               component: './Welcome',
+              hideInMenu: true,
+            },
+            {
+              path: '/home',
+              name: 'home',
+              icon: 'home',
+              component: './Home',
             },
             {
               path: '/admin',
@@ -77,6 +86,7 @@ export default defineConfig({
               icon: 'table',
               path: '/list',
               component: './ListTableList',
+              hideInMenu: true,
             },
             {
               component: './404',
