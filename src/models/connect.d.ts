@@ -1,8 +1,8 @@
 import { MenuDataItem, Settings as ProSettings } from '@ant-design/pro-layout';
+import { HomeStateType } from '@/pages/Home/model';
 import { GlobalModelState } from './global';
 import { UserModelState } from './user';
 import { StateType } from './login';
-import { HomeStateType } from '@/pages/Home/model';
 
 export { GlobalModelState, UserModelState };
 

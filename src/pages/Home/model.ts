@@ -1,10 +1,10 @@
 import { stringify } from 'querystring';
 import { history, Reducer, Effect } from 'umi';
 
-import { getArticleList } from './service';
-import { ArticleListType } from './data.d';
 import { setAuthority } from '@/utils/authority';
 import { getPageQuery } from '@/utils/utils';
+import { getArticleList } from './service';
+import { ArticleListType } from './data.d';
 
 export interface HomeStateType {
   listData: ArticleListType[];
